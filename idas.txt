@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Character Input Table Column</title>
+<style>
+  table {
+    border-collapse: collapse;
+  }
+  td {
+    border: 1px solid black;
+    width: 20px; /* Adjust width as needed */
+    height: 20px; /* Adjust height as needed */
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<table>
+  <tr>
+    <td contenteditable="true" oninput="moveToNext(this)"></td>
+    <td contenteditable="true" oninput="moveToNext(this)"></td>
+    <td contenteditable="true" oninput="moveToNext(this)"></td>
+  
+  </tr>
+</table>
+
+<script>
+function moveToNext(input) {
+  var nextCell = input.parentElement.nextElementSibling.querySelector('td');
+  if (nextCell && input.innerText.length === 1) {
+    nextCell.focus();
+  }
+}
+</script>
+
+</body>
+</html>

@@ -10,12 +10,15 @@
 
 <body>
 
+    
     <div class="topnav">
         <a class="active" href="#home">Home</a>
         <a href="#news">News</a>
         <a href="#contact">Contact</a>
         <a href="#about">About</a>
     </div>
+    
+    <img class="logo" src="inoriac-high-resolution-logo.png" alt="no image" srcset="">
 
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -25,7 +28,7 @@
         <a href="#">Contact</a>
     </div>
 
-    <h2>Animated Sidenav Example</h2>
+    <h2>Account Opening Form </h2>
     <p>Click on the element below to open the side navigation menu.</p>
     <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
 
@@ -125,6 +128,69 @@
     <input type="text" id="cPincode" name="cPincode">
     <br>
 
+    <div>
+        <label for="illiterate">Illiterate:</label>
+        <input type="checkbox" id="illiterate" name="illiterate">
+    </div>
+    <div>
+        <label for="guardian">Guardian:</label>
+        <input type="text" id="guardian" name="guardian">
+    </div>
+    <div>
+        <label for="relation">Relation with Guardian:</label>
+        <input type="text" id="relation" name="relation">
+    </div>
+    <div>
+        <label for="nationality">Nationality:</label>
+        <select id="nationality" name="nationality">
+            <option value="India" selected>India</option>
+            <option value="Other">Other</option>
+        </select>
+    </div>
+    <div>
+        <label for="citizenship">Citizenship:</label>
+        <input type="text" id="citizenship" name="citizenship" disabled>
+    </div>
+    <div>
+        <label for="religion">Religion:</label>
+        <select id="religion" name="religion">
+            <option value="Hinduism">Hinduism</option>
+            <option value="Islam">Islam</option>
+            <option value="Christianity">Christianity</option>
+            <option value="Sikhism">Sikhism</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <div>
+            Category:
+            <input type="checkbox" name="General" id="General"> General
+            <input type="checkbox" name="OBC" id="OBC"> OBC
+            <input type="checkbox" name="SC" id="SC"> SC
+            <input type="checkbox" name="ST" id="G" ST> ST
+        </div>
+    </div>
+
+    <div>
+        <label for="occupation">Occupation:</label>
+        <div>
+            <input type="checkbox" id="student" name="occupation" value="student">
+            <label for="student">Student</label>
+            <input type="checkbox" id="employee" name="occupation" value="employee">
+            <label for="employee">Employee</label>
+            <input type="checkbox" id="selfEmployed" name="occupation" value="self-employed">
+            <label for="selfEmployed">Self-Employed</label>
+            <!-- Add more checkboxes for other occupation types if needed -->
+        </div>
+    </div>
+    <div>
+        <label for="organization">Organization Name:</label>
+        <input type="text" id="organization" name="organization">
+    </div>
+    <div>
+        <label for="profession">Profession:</label>
+        <input type="text" id="profession" name="profession">
+    </div>
+
 
     <h3>C. Contact Details</h3>
     <label for="mobileNo">Mobile Number*:</label>
@@ -153,15 +219,83 @@
     <label for="accountType">1. Account Type*:</label>
     <select id="accountType" name="accountType" required>
         <option value="savings">Savings Account</option>
-        <option value="current">Current Account</option>
+        <option value="current">Current Account</option> ₹
+        <option value="current">Salary Account</option>
+        <option value="current">Not Applicable </option>
     </select>
     <br>
-    <label for="initialDeposit">2. Initial Deposit (Optional):</label>
-    <input type="number" min="0" id="initialDeposit" name="initialDeposit">
+    <label for="initialDeposit">2. Initial Deposit: </label>
+    <input type="number" min="0" id="initialDeposit" name="initialDeposit" placeholder="Min 2000">
     <br>
+    <p id="amountOutput"> </p>
 
+    <p> => Use The slide to choose Your Monthly Income Range </p>
+    <div class="slidecontainer">
+        <input type="range" min="1" max="100000" value="50" class="slider" id="myRange">
+        <p>Value: <span id="demo"></span></p>
+    </div>
+    <H3>Proof of Identity</H3>
+    <div>
+        <input type="checkbox" id="passport" name="document" value="passport">
+        <label for="passport">A - Passport</label>
 
-    <h3>F. Terms and Conditions</h3>
+        <input type="checkbox" id="voterId" name="document" value="voter-id">
+        <label for="voterId">B - Voter's Identity Card</label>
+
+        <input type="checkbox" id="drivingLicense" name="document" value="driving-license">
+        <label for="drivingLicense">C - Driving Licence</label>
+
+        <input type="checkbox" id="aadharProof" name="document" value="aadhar-proof">
+        <label for="aadharProof">D - Proof of possession of Aadhaar Number (Verification) </label>
+
+        <input type="checkbox" id="jobCard" name="document" value="job-card">
+        <label for="jobCard">E - NREGA Job Card</label>
+
+        <input type="checkbox" id="nprLetter" name="document" value="npr-letter">
+        <label for="nprLetter">F - Letter issued by National Population Register containing details of name &
+            address</label>
+
+        <input type="checkbox" id="KYC" name="document" value="E-KYC">
+        <label for="jobCard">G- E-KYC </label>
+
+        <input type="checkbox" id="offline" name="document" value="Offline">
+        <label for="nprLetter">H - Offline </label>
+
+        Document No/Identification Number* <input type="text" name="" id=""> <br>
+        Issued By: <input type="text" name="" id="">
+        Issued Date: <input type="date" placeholder="dd/mm/yyyy">
+        Expiry Date(If Applicable): <input type="date" placeholder="dd/mm/yyyy">
+
+    </div>
+
+    <h3> DECLARATION CUM UNDERTAKING CUM SELF-CERTIFICATION</h3>
+    <div>
+        <label for="photo">Photo:</label>
+        <input type="file" id="photo" name="photo">
+    </div>
+    <div>
+        <label for="signature">Signature:</label>
+        <input type="file" id="signature" name="signature">
+    </div>
+    <div>
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date">
+    </div>
+    <div>
+        <label for="place">Place:</label>
+        <input type="text" id="place" name="place">
+    </div>
+    <p>
+        I hereby declare that all the information furnished by me is true to the best of my knowledge. I understand
+        that if any of the information provided by me is found to be false or incorrect at any stage, my application
+        is liable to be rejected and I shall be liable for any legal action under relevant laws. I undertake to
+        inform the Bank of any changes in my address/contact details. I also undertake to provide any additional
+        documents/information as may be required by the Bank for processing my application.
+    </p>
+    <input type="checkbox" name="" id=""> Confirmed.
+
+    </div>
+    <h3>H. Terms and Conditions</h3>
     <p>Please read and agree to the terms and conditions before submitting your application.</p>
     <a href="#">View Terms and Conditions</a>
     <br>
