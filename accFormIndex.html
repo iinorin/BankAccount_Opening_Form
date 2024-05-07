@@ -5,19 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="accFormStyle.css">
 </head>
 
 <body>
 
-    
+
     <div class="topnav">
         <a class="active" href="#home">Home</a>
         <a href="#news">News</a>
         <a href="#contact">Contact</a>
         <a href="#about">About</a>
     </div>
-    
+
     <img class="logo" src="inoriac-high-resolution-logo.png" alt="no image" srcset="">
 
     <div id="mySidenav" class="sidenav">
@@ -33,17 +38,25 @@
     <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
 
     <form action="noaction.php">
-        Date: <input type="Date" name="Date" id="Date" placeholder="dd/mm/yyyy">
-        Branch Name*: <input type="text" name="text1" id="brachName">
-        Branch Code*: <input type="text" name="text1" id="brachCode">
+        Date: <input type="Date" name="Date" id="Date" placeholder="dd/mm/yyyy"> <br>
 
-        customer ID*: <input type="text" name="text1" id="brachName"> Application type New <input type="radio"
-            name="appType" id="appType"> Update <input type="radio" name="appType" id="appType">
+        <div class="branches">
+            <span> Branch Name*: <input type="text" name="text1" id="brachName"> </span>
+            <span> Branch Code*: <input type="text" name="text1" id="brachCode"> </span>
+            <span> Customer ID*: <input type="text" name="text1" id="brachName"> </span>
+        </div>
 
-        <br><br>
-        Account No. <input type="number" name="existingAcc" id="existingAcc">
-        CKYC No. <input type="number" name="existingAcc" id="existingAcc">
+        <div class="accopOPT">
+            Application type: <br>
+            <span> <input type="radio" name="appType" id="appType"> New <input type="radio" name="appType" id="appType">
+                Update </span>
+        </div>
 
+        <div class="numbs">
+            Account No. <input type="number" name="existingAcc" id="existingAcc">
+            CKYC No. <input type="number" name="existingAcc" id="existingAcc">
+        </div>
+  
         <div class="account-type">
             <input type="radio" id="normal" name="account" value="normal" checked>
             <label for="normal">Normal</label>
