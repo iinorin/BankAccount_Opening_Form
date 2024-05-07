@@ -38,7 +38,9 @@
     <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
 
     <form action="noaction.php">
-        Date: <input type="Date" name="Date" id="Date" placeholder="dd/mm/yyyy"> <br>
+        <div class="datediv">
+            Date: <input type="Date" name="Date" id="Date" placeholder="dd/mm/yyyy"> <br>
+        </div>
 
         <div class="branches">
             <span> Branch Name*: <input type="text" name="text1" id="brachName"> </span>
@@ -53,10 +55,12 @@
         </div>
 
         <div class="numbs">
-            Account No. <input type="number" name="existingAcc" id="existingAcc">
-            CKYC No. <input type="number" name="existingAcc" id="existingAcc">
+            <span> Account No. <input type="number" name="existingAcc" id="existingAcc"> </span>
+            <span> CKYC No. <input type="number" name="existingAcc" id="existingAcc"> </span>
         </div>
-  
+
+        <span id="acctype"> Account Type &#8667; </span>
+
         <div class="account-type">
             <input type="radio" id="normal" name="account" value="normal" checked>
             <label for="normal">Normal</label>
@@ -70,8 +74,10 @@
             <label for="minor">Minor</label>
         </div>
 
-        <br>
-        Staff <input type="checkbox" name="" id=""> PF No. <input type="number" name="pfNumber" id="pfNumber">
+        <div class="staffPF">
+             <span> <input type="checkbox" name="" id=""> Staff </span>
+             <span> <input type="number" name="pfNumber" id="pfNumber">  PF No. </span> 
+        </div>
     </form>
 
 
