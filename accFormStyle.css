@@ -6,10 +6,49 @@ body {
 .logo {
   position: absolute;
   top: 70px;
-  right: 0;
+  right: 30px;
   width: 200px;
   height: 150px;
+  /* animation: rotate 5s linear infinite; */
+  /* animation: moveRightLeft 5s ease-in-out infinite alternate; */
 }
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg); /* Start the rotation from 0 degrees */
+  }
+  to {
+    transform: rotate(360deg); /* End the rotation at 360 degrees */
+  }
+}
+
+@keyframes moveRightLeft {
+  from {
+    right: 0; /* Start the animation from the right */
+  }
+  to {
+    right: calc(100% - 100px); /* Move the image to the left */
+  }
+}
+
+
+.marquee-container {
+  width: 3000%; 
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-content {
+  display: inline-block;
+  animation: scroll-left 10s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(250%); }
+  100% { transform: translateX(-100%); }
+}
+
+
 
 .datediv {
   display: flex;
@@ -225,7 +264,7 @@ input:hover {
 
 .accopOPT {
   margin-top: 20px;
-  margin-left: 100px;
+  margin-left: 20px;
 }
 
 .accopOPT input[type="radio"] {
@@ -237,7 +276,7 @@ input:hover {
   border-radius: 50%;
   border: 2px solid #999;
   outline: none;
-  margin-right: 10px;
+ 
   cursor: pointer;
   transition: border-color 0.3s ease, transform 0.3s ease;
 }
@@ -252,14 +291,14 @@ input:hover {
 
 .accopOPT input {
   margin-top: 10px;
-  margin-left: 200px;
+  margin-left: 30px;
 }
 
 .numbs {
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+  /* justify-content:space-around; */
   margin-top: 30px;
+  margin: 20px;
 
 }
 
@@ -267,7 +306,7 @@ input:hover {
   padding: 8px;
   border: 2px solid #ccc;
   border-radius: 5px;
-  margin-right: 10px;
+  margin-right: 140px;
   font-size: 16px;
   transition: border-color 0.3s ease;
 }
@@ -293,8 +332,8 @@ input:hover {
 
 
 .staffPF {
-  margin-top: 40px;
-  margin-left: 40px;
+  margin-top: 30px;
+  margin-left: 20px;
   color: #333;
 }
 
@@ -339,4 +378,74 @@ input:hover {
 
 .staffPF input[type="number"]::placeholder {
   color: #999;
+}
+
+
+
+.dobuser {
+  color: #444;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.dobuser label {
+  margin-bottom: 5px;
+  margin-right: 10px;
+}
+
+.dobuser input[type="date"] {
+  padding: 8px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 10%;
+  transition: border-color 0.3s ease;
+}
+
+.dobuser input[type="date"]:focus {
+  border-color: dodgerblue;
+  transform: scale(1.1);
+}
+
+.dobuser input[type="date"]::placeholder {
+  color: #999;
+}
+
+.genmar {
+  color: #333;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.genmar label {
+  margin-bottom: 5px;
+}
+
+.genmar select {
+  padding: 2px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 20%;
+  /* transition: border-color 0.3s ease; */
+  transition: transform 0.8s ease;
+}
+
+.genmar select:focus {
+  border-color: dodgerblue;
+}
+
+
+/* Remove default focus outline */
+.genmar select:focus {
+  border-color: dodgerblue;
+  outline: none;
+}
+
+/* Hover effect */
+.genmar select:hover {
+  border-color: #999;
+  transform: scale(1.5);
+
 }
