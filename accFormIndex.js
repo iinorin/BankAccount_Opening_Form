@@ -64,3 +64,24 @@ document.getElementById('initialDeposit').addEventListener('input', function() {
     document.getElementById('amountOutput').innerHTML = numberToWords(number);
 });
 
+// Get the radio buttons
+var yesRadioButton = document.getElementById('disability-yes');
+var noRadioButton = document.getElementById('disability-no');
+
+// Get the specify disability section
+var specifyDisabilitySection = document.getElementById('disability-details');
+
+// Add event listener to the radio buttons
+yesRadioButton.addEventListener('change', function() {
+    if (yesRadioButton.checked) {
+        specifyDisabilitySection.style.display = 'block';
+    } else {
+        specifyDisabilitySection.style.display = 'none';
+    }
+});
+
+noRadioButton.addEventListener('change', function() {
+    if (noRadioButton.checked) {
+        specifyDisabilitySection.style.display = 'none';
+    }
+});

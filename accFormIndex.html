@@ -38,7 +38,7 @@
     <div class="marquee-container">
         <div class="marquee-content">We Now have 1K Branches </div>
     </div>
-    
+
 
     <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
 
@@ -88,17 +88,23 @@
 
 
     <h3>A. Personal Details</h3>
-    <label for="name">1. Name*:</label>
-    <input type="text" id="name" name="name" required placeholder="Same as ID proof ">
-    <br>
-    <label for="maidenName">2. Maiden Name (if applicable):</label>
-    <input type="text" id="maidenName" name="maidenName">
+    <div class="name1">
+        <label for="name">1. Name*:</label>
+        <input type="text" id="name" name="name" required placeholder="Same as ID proof ">
+    </div>
+
+    <div class="maidname">
+        <label for="maidenName">2. Maiden Name: </label>
+        <input type="text" id="maidenName" name="maidenName">
+        <br> <small> **if applicable </small>
+    </div>
+
 
     <div class="dobuser">
         <label for="dateOfBirth">3. Date of Birth*:</label>
         <input type="date" id="dateOfBirth" name="dateOfBirth" required>
     </div>
-    
+
     <div class="genmar">
         <label for="gender">4. Gender*:</label>
         <select id="gender" name="gender" required>
@@ -118,16 +124,51 @@
         </select>
     </div>
 
-    <label for="parentName">6. Name of Father/Mother/Spouse:</label>
-    <input type="text" id="parentName" name="parentName">
-    <br>
+    <div class="disability">
+        <label>6. Person with disability:</label>
+        <label for="disability-yes">
+            <input type="radio" id="disability-yes" name="disability" value="yes">
+            Yes
+        </label>
+        <label for="disability-no">
+            <input type="radio" id="disability-no" name="disability" value="no" checked>
+            No
+        </label>
+    </div>
+
+    <div class="specifydis" id="disability-details" style="display: none;">
+        <label>If yes, please specify:</label>
+
+        <label for="visually-impaired">
+            <input type="checkbox" id="visually-impaired" name="disability-type[]" value="visually-impaired">
+            Visually impaired
+        </label>
+        <label for="differently-abled">
+            <input type="checkbox" id="differently-abled" name="disability-type[]" value="differently-abled">
+            Differently abled
+        </label>
+
+    </div>
+
+
     <label for="noOfDependents">7. No. of Dependents:</label>
     <input type="number" id="noOfDependents" name="noOfDependents">
     <br>
-    <div>
-        <label for="illiterate">Illiterate:</label>
+
+    <div class="studies">
+        <label for="illiterate">8. Illiterate:</label>
         <input type="checkbox" id="illiterate" name="illiterate">
+
+        <label for="qualification" class="qualify">9. Qualification: </label>
+        <input type="text" name="qualification" id="qualification">
     </div>
+
+    <div class="famasp">
+        <label for="name">10. Name of Father/Mother/Spouse*</label>
+        <input type="text" id="name" name="name" required> <br>
+        <small class="form-text"> **Father's name is mandatory if PAN is not provided.</small>
+    </div>
+
     <div>
         <label for="guardian">Guardian:</label>
         <input type="text" id="guardian" name="guardian">
