@@ -1,6 +1,7 @@
 body {
   font-family: Jaro;
   font-size: 25px;
+  background-color: #cadff7;
 }
 
 .logo {
@@ -391,16 +392,18 @@ input:hover {
   color: #999;
 }
 
-.name1{
+.name1 {
   margin-bottom: 20px;
   margin-top: 20px;
 }
+
 .name1 label {
- font-size: 25px;
+  font-size: 25px;
   margin-bottom: 5px;
   color: #333;
   margin-right: 15px;
 }
+
 .name1 input[type="text"] {
   width: 85%;
   padding: 10px;
@@ -413,6 +416,7 @@ input:hover {
 .name1 input[type="text"]:hover {
   border-color: dodgerblue;
 }
+
 /* Container for the input field */
 .maidname {
   margin-bottom: 20px;
@@ -496,6 +500,7 @@ input:hover {
   border-radius: 5px;
   font-size: 16px;
   width: 20%;
+  font-family: Jaro;
   /* transition: border-color 0.3s ease; */
   transition: transform 0.8s ease;
 }
@@ -564,14 +569,14 @@ input:hover {
   margin-bottom: 5px;
   font-size: 30px;
   color: #333;
- 
+
 }
 
 /* Checkbox for illiterate */
 .studies input[type="checkbox"] {
   margin-right: 5px;
   height: 20px;
-  width:40px;
+  width: 40px;
   transition: transform 0.8s ease;
 }
 
@@ -599,7 +604,126 @@ input:hover {
   transform: scale(1.2);
 }
 
-.qualify{
+.qualify {
   margin-left: 370px;
 }
 
+
+/* Container for the family aspect */
+.famasp {
+  margin-bottom: 20px;
+}
+
+.famasp label {
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.famasp input[type="text"] {
+  width: calc(100% - 120px);
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  /* transition: border-color 0.3s ease; */
+  transition: transform 0.8s ease;
+  margin-left: 30px;
+}
+.famasp input[type="text"]:hover {
+  border-color: dodgerblue;
+  transform: scale(1.04);
+}
+
+/* Small text for additional information */
+.famasp small {
+  display: block;
+  margin-top: 5px;
+  font-size: 14px;
+  color: #888;
+  margin-left: 30px;
+}
+.famasp small:hover {
+  color: #666;
+}
+
+
+
+/* Container for the Guardian section */
+.guardinfo {
+  margin-bottom: 20px;
+}
+.guardinfo label {
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.guardinfo input{
+  margin-right: 30px;
+}
+
+.guardinfo input[type="text"] {
+  width: calc(35% - 100px); 
+  padding: 10px;
+  /* font-size: 16px; */
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+/* Input hover effect */
+.guardinfo input[type="text"]:hover {
+  border-color: dodgerblue;
+}
+
+/* Placeholder text styling */
+.guardinfo input[type="text"]::placeholder {
+  color: #aaa; /* Placeholder text color */
+}
+
+
+
+
+/* Container for the Nationality section */
+.national {
+  margin-bottom: 20px;
+}
+
+.national label {
+  margin-right: 10px;
+  color: #333;
+}
+
+.national select {
+  padding: 10px;
+  font-size: 16px;
+  font-family: Jaro;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+.national input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+.national input[type="text"]:hover,
+.national select:hover {
+  border-color: dodgerblue;
+}
+
+.national small {
+  font-size: 14px;
+  color: #888;
+}
+
+.national small:hover {
+  color: #666;
+}
+
+.notInd{
+ margin-left: 250px;
+}

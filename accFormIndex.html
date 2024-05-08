@@ -108,6 +108,7 @@
     <div class="genmar">
         <label for="gender">4. Gender*:</label>
         <select id="gender" name="gender" required>
+            <option value="">Choose Your Gender </option>
             <option value="male">Male</option>
             <option value="female">Female</option>
             <option value="thirdGender">Third Gender</option>
@@ -115,6 +116,7 @@
         <br>
         <label for="maritalStatus">5. Marital Status:</label>
         <select id="maritalStatus" name="maritalStatus">
+            <option value="">Choose an Option</option>
             <option value="married">Married</option>
             <option value="unmarried">Unmarried</option>
             <option value="single">Single</option>
@@ -169,24 +171,29 @@
         <small class="form-text"> **Father's name is mandatory if PAN is not provided.</small>
     </div>
 
-    <div>
-        <label for="guardian">Guardian:</label>
+    <div class="guardinfo">
+        <label for="guardian">11. Guardian:</label>
         <input type="text" id="guardian" name="guardian">
+
+        <label for="relation">12. Relation with Guardian:</label>
+        <input type="text" id="relation" name="relation" placeholder="In case of Minor">
     </div>
-    <div>
-        <label for="relation">Relation with Guardian:</label>
-        <input type="text" id="relation" name="relation">
-    </div>
-    <div>
-        <label for="nationality">Nationality:</label>
+
+    <div class="national">
+        <label for="nationality">13. Nationality:</label>
         <select id="nationality" name="nationality">
-            <option value="India" selected>India</option>
-            <option value="Other">Other</option>
+            <option value="" selected> Select Country </option>
+            <option value="India"> India </option>
+            <option value="Other"> Other </option>
         </select>
+        <label for="notInd" class="notInd">14.  Country: </label>
+        <input type="text" name="notInd" id="notInd">
+        <small>**If not India</small>
     </div>
+
     <div>
         <label for="citizenship">Citizenship:</label>
-        <input type="text" id="citizenship" name="citizenship" disabled>
+        <input type="text" id="citizenship" name="citizenship">
     </div>
     <div>
         <label for="religion">Religion:</label>
@@ -208,6 +215,7 @@
     </div>
 
     <h3>B. Communication Address</h3>
+
     <p>**Permanent Address (Within Last 3 Years)**</p>
     <label for="pAddressLine1">Address Line 1:</label>
     <input type="text" id="pAddressLine1" name="pAddressLine1" required>
@@ -221,6 +229,8 @@
     <label for="pPincode">Pincode:</label>
     <input type="text" id="pPincode" name="pPincode" required>
     <br>
+
+    
     <p>**Present Address (If Different from Permanent Address)**</p>
     <label for="sameAsPermanent">Same as Permanent Address:</label>
     <input type="checkbox" id="sameAsPermanent" name="sameAsPermanent">

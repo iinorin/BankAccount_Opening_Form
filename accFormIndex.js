@@ -85,3 +85,33 @@ noRadioButton.addEventListener('change', function() {
         specifyDisabilitySection.style.display = 'none';
     }
 });
+
+
+// Get the checkbox and address fields
+const sameAsPermanentCheckbox = document.getElementById('sameAsPermanent');
+const pAddressLine1 = document.getElementById('pAddressLine1');
+const pAddressLine2 = document.getElementById('pAddressLine2');
+const pCity = document.getElementById('pCity');
+const pPincode = document.getElementById('pPincode');
+
+const cAddressLine1 = document.getElementById('cAddressLine1');
+const cAddressLine2 = document.getElementById('cAddressLine2');
+const cCity = document.getElementById('cCity');
+const cPincode = document.getElementById('cPincode');
+
+// Add event listener to checkbox
+sameAsPermanentCheckbox.addEventListener('change', function() {
+    if (sameAsPermanentCheckbox.checked) {
+        // Copy values from permanent address to present address
+        cAddressLine1.value = pAddressLine1.value;
+        cAddressLine2.value = pAddressLine2.value;
+        cCity.value = pCity.value;
+        cPincode.value = pPincode.value;
+    } else {
+        // Clear present address fields
+        cAddressLine1.value = '';
+        cAddressLine2.value = '';
+        cCity.value = '';
+        cPincode.value = '';
+    }
+});
