@@ -92,11 +92,17 @@ const sameAsPermanentCheckbox = document.getElementById('sameAsPermanent');
 const pAddressLine1 = document.getElementById('pAddressLine1');
 const pAddressLine2 = document.getElementById('pAddressLine2');
 const pCity = document.getElementById('pCity');
+const pDistrict = document.getElementById('pDistrict');
+const pState = document.getElementById('pState');
+const pCountry = document.getElementById('pCountry');
 const pPincode = document.getElementById('pPincode');
 
 const cAddressLine1 = document.getElementById('cAddressLine1');
 const cAddressLine2 = document.getElementById('cAddressLine2');
 const cCity = document.getElementById('cCity');
+const cDistrict = document.getElementById('cDistrict');
+const cState = document.getElementById('cState');
+const cCountry = document.getElementById('cCountry');
 const cPincode = document.getElementById('cPincode');
 
 // Add event listener to checkbox
@@ -106,12 +112,18 @@ sameAsPermanentCheckbox.addEventListener('change', function() {
         cAddressLine1.value = pAddressLine1.value;
         cAddressLine2.value = pAddressLine2.value;
         cCity.value = pCity.value;
+        cDistrict.value = pDistrict.value;
+        cState.value = pState.value;
+        cCountry.value = pCountry.value;
         cPincode.value = pPincode.value;
     } else {
         // Clear present address fields
         cAddressLine1.value = '';
         cAddressLine2.value = '';
         cCity.value = '';
+        cDistrict.value = '';
+        cState.value = '';
+        cCountry.value = '';
         cPincode.value = '';
     }
 });

@@ -40,7 +40,7 @@
     </div>
 
 
-    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+    <span class="openNav" onclick="openNav()">&#9776; open</span>
 
     <form action="noaction.php">
         <div class="datediv">
@@ -48,20 +48,27 @@
         </div>
 
         <div class="branches">
-            <span> Branch Name*: <input type="text" name="text1" id="brachName"> </span>
-            <span> Branch Code*: <input type="text" name="text1" id="brachCode"> </span>
-            <span> Customer ID*: <input type="text" name="text1" id="brachName"> </span>
+            <span><label for="branchName"> Branch Name*: </label> <input type="text" name="text1" id="branchName">
+            </span>
+            <span><label for="branchCode"> Branch Code*: </label> <input type="text" name="text1" id="branchCode">
+            </span>
+            <span><label for="customerId"> Customer ID*: </label> <input type="text" name="text1" id="customerId">
+            </span>
         </div>
 
         <div class="accopOPT">
             Application type:
-            <span> <input type="radio" name="appType" id="appType"> New <input type="radio" name="appType" id="appType">
-                Update </span>
+            <span>
+                <input type="radio" name="appType" id="appType"> <label for="appType"> New </label>
+                <input type="radio" name="appType" id="appType2"> <label for="appType2"> <label for=""></label>Update
+                </label>
+            </span>
         </div>
 
         <div class="numbs">
-            <span> Account No. <input type="number" name="existingAcc" id="existingAcc"> </span>
-            <span> CKYC No. <input type="number" name="existingAcc" id="existingAcc"> </span>
+            <span> <label for="existingAcc"> Account No. </label> <input type="number" name="existingAcc"
+                    id="existingAcc"> </span>
+            <span> <label for="ckyc"> CKYC No. </label> <input type="number" name="existingAcc" id="ckyc"> </span>
         </div>
 
         <span id="acctype"> Account Type &#8667; </span>
@@ -80,7 +87,7 @@
         </div>
 
         <div class="staffPF">
-            <span> <input type="checkbox" name="" id=""> Staff </span>
+            <span> <input type="checkbox" name="" id="ifStaff"><label for="ifStaff"> Staff </label> </span>
             <span> <input type="number" name="pfNumber" id="pfNumber" placeholder="Staff PF No."> PF No. </span>
         </div>
     </form>
@@ -138,7 +145,7 @@
         </label>
     </div>
 
-    <div class="specifydis" id="disability-details" style="display: none;">
+    <div class="specifydis" id="disability-details">
         <label>If yes, please specify:</label>
 
         <label for="visually-impaired">
@@ -186,17 +193,16 @@
             <option value="India"> India </option>
             <option value="Other"> Other </option>
         </select>
-        <label for="notInd" class="notInd">14.  Country: </label>
+        <label for="notInd" class="notInd">14. Country: </label>
         <input type="text" name="notInd" id="notInd">
         <small>**If not India</small>
     </div>
 
-    <div>
-        <label for="citizenship">Citizenship:</label>
+    <div class="citzrel">
+        <label for="citizenship">15. Citizenship:</label>
         <input type="text" id="citizenship" name="citizenship">
-    </div>
-    <div>
-        <label for="religion">Religion:</label>
+
+        <label for="religion" class="religion">16. Religion:</label>
         <select id="religion" name="religion">
             <option value="Hinduism">Hinduism</option>
             <option value="Islam">Islam</option>
@@ -204,71 +210,256 @@
             <option value="Sikhism">Sikhism</option>
             <option value="Other">Other</option>
         </select>
+    </div>
 
+    <div class="catclass">
+        17. Category:
+        <label for="General">General</label> <input type="checkbox" name="General" id="General">
+        <label for="OBC">OBC</label> <input type="checkbox" name="OBC" id="OBC">
+        <label for="SC">SC</label> <input type="checkbox" name="SC" id="SC">
+        <label for="ST">ST</label> <input type="checkbox" name="ST" id="ST">
+    </div>
+
+
+
+    <div class="occpcl">
+        <span for="occupation">18. Occupation:</span>
         <div>
-            Category:
-            <input type="checkbox" name="General" id="General"> General
-            <input type="checkbox" name="OBC" id="OBC"> OBC
-            <input type="checkbox" name="SC" id="SC"> SC
-            <input type="checkbox" name="ST" id="G" ST> ST
+            <table>
+                <tr>
+                    <td>
+                        <input type="checkbox" id="student" name="occupation" value="Student">
+                        <label for="student">Student</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="employee" name="occupation" value="Employee">
+                        <label for="employee">Employee</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="selfEmployed" name="occupation" value="Self-Employed">
+                        <label for="selfEmployed">Self-Employed</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="business" name="occupation" value="Business">
+                        <label for="business">Business</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" id="service" name="occupation" value="Service">
+                        <label for="service">Service</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="stateGovt" name="occupation" value="State Govt.">
+                        <label for="stateGovt">State Govt.</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="centralGovt" name="occupation" value="Central Govt.">
+                        <label for="centralGovt">Central Govt.</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="publicSector" name="occupation" value="Public Sector Undertaking">
+                        <label for="publicSector">Public Sector Undertaking</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" id="defence" name="occupation" value="Defence">
+                        <label for="defence">Defence</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="pvtSector" name="occupation" value="Pvt. Sector">
+                        <label for="pvtSector">Pvt. Sector</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="industrialist" name="occupation" value="Industrialist">
+                        <label for="industrialist">Industrialist</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="tradeSector" name="occupation" value="Trade Sect.">
+                        <label for="tradeSector">Trade Sect.</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" id="serviceSector" name="occupation" value="Serv. Sect.">
+                        <label for="serviceSector">Serv. Sect.</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="migrantLabour" name="occupation" value="Migrant Labour">
+                        <label for="migrantLabour">Migrant Labour</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="contractor" name="occupation" value="Contractor">
+                        <label for="contractor">Contractor</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="jeweller" name="occupation" value="Jeweller / Bullion Trader">
+                        <label for="jeweller">Jeweller / Bullion Trader</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" id="pawnShop" name="occupation" value="Pawn Shop">
+                        <label for="pawnShop">Pawn Shop</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="medicalProf" name="occupation" value="Medical Prof.">
+                        <label for="medicalProf">Medical Prof.</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="legalProf" name="occupation" value="Legal Prof.">
+                        <label for="legalProf">Legal Prof.</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="ca" name="occupation" value="CA/ICWA/Taxation/ Finance">
+                        <label for="ca">CA/ICWA/Taxation/ Finance</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" id="engineer" name="occupation" value="Eng./Architect/Tech. Consultant">
+                        <label for="engineer">Eng./Architect/Tech. Consultant</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="retiredJournalist" name="occupation" value="Retired Journalist">
+                        <label for="retiredJournalist">Retired Journalist</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="housewife" name="occupation" value="Housewife">
+                        <label for="housewife">Housewife</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="shareStockBroker" name="occupation" value="Share and Stock Broker">
+                        <label for="shareStockBroker">Share and Stock Broker</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" id="otherProfessional" name="occupation" value="Oth. Professional">
+                        <label for="otherProfessional">Oth. Professional</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="agriculture" name="occupation" value="Agriculture">
+                        <label for="agriculture">Agriculture</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="politicalSocialWorker" name="occupation"
+                            value="Political / Social Worker">
+                        <label for="politicalSocialWorker">Political / Social Worker</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="importExportCustomer" name="occupation"
+                            value="Import/ Export Worker">
+                        <label for="importExportCustomer">Import / Export Customer</label>
+                    </td>
+
+                </tr>
+            </table>
+
         </div>
+    </div>
+
+    <div class="orgprof">
+        <label for="organization"> 19.Organization Name:</label>
+        <input type="text" id="organization" name="organization">
+
+        <label for="profession" class="profclass"> 20. Profession:</label>
+        <input type="text" id="profession" name="profession">
     </div>
 
     <h3>B. Communication Address</h3>
 
-    <p>**Permanent Address (Within Last 3 Years)**</p>
-    <label for="pAddressLine1">Address Line 1:</label>
-    <input type="text" id="pAddressLine1" name="pAddressLine1" required>
-    <br>
-    <label for="pAddressLine2">Address Line 2:</label>
-    <input type="text" id="pAddressLine2" name="pAddressLine2">
-    <br>
-    <label for="pCity">City:</label>
-    <input type="text" id="pCity" name="pCity" required>
-    <br>
-    <label for="pPincode">Pincode:</label>
-    <input type="text" id="pPincode" name="pPincode" required>
-    <br>
+    <!-- Permanent Address -->
+    <div class="permanent-address">
+        <p>**Permanent Address (Within Last 3 Years)**</p>
 
-    
-    <p>**Present Address (If Different from Permanent Address)**</p>
-    <label for="sameAsPermanent">Same as Permanent Address:</label>
-    <input type="checkbox" id="sameAsPermanent" name="sameAsPermanent">
-    <br>
-    <label for="cAddressLine1">Address Line 1:</label>
-    <input type="text" id="cAddressLine1" name="cAddressLine1">
-    <br>
-    <label for="cAddressLine2">Address Line 2:</label>
-    <input type="text" id="cAddressLine2" name="cAddressLine2">
-    <br>
-    <label for="cCity">City:</label>
-    <input type="text" id="cCity" name="cCity">
-    <br>
-    <label for="cPincode">Pincode:</label>
-    <input type="text" id="cPincode" name="cPincode">
-    <br>
+        <div class="typeadpin">
+            <label for="pAddressType">Address Type:</label>
+            <select id="pAddressType" name="pAddressType">
+                <option value="Unspecified"> Unspecified </option>
+                <option value="Residential">Residential</option>
+                <option value="Office">Office</option>
+                <option value="Business">Business</option>
+                <option value="RegOffice">Registered Office</option>
+                <option value="Other">Other</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="pPincode">Pincode:</label>
+            <input type="text" id="pPincode" name="pPincode" required>
+        </div>
 
 
+        <div class="address">
+            <label for="pAddressLine1">Address Line 1:</label>
+            <input type="text" id="pAddressLine1" name="pAddressLine1" required>
 
-    <div>
-        <label for="occupation">Occupation:</label>
-        <div>
-            <input type="checkbox" id="student" name="occupation" value="student">
-            <label for="student">Student</label>
-            <input type="checkbox" id="employee" name="occupation" value="employee">
-            <label for="employee">Employee</label>
-            <input type="checkbox" id="selfEmployed" name="occupation" value="self-employed">
-            <label for="selfEmployed">Self-Employed</label>
-            <!-- Add more checkboxes for other occupation types if needed -->
+            <label for="pAddressLine2">Address Line 2:</label>
+            <input type="text" id="pAddressLine2" name="pAddressLine2">
+        </div>
+
+        <div class="statecty">
+            <label for="pCity">City:</label>
+            <input type="text" id="pCity" name="pCity" required>
+
+            <label for="pDistrict">District:</label>
+            <input type="text" id="pDistrict" name="pDistrict" required>
+        </div>
+
+        <div class="stacoun">
+            <label for="pState">State:</label>
+            <input type="text" id="pState" name="pState" required>
+
+            <label for="pCountry">Country:</label>
+            <input type="text" id="pCountry" name="pCountry" required>
         </div>
     </div>
-    <div>
-        <label for="organization">Organization Name:</label>
-        <input type="text" id="organization" name="organization">
-    </div>
-    <div>
-        <label for="profession">Profession:</label>
-        <input type="text" id="profession" name="profession">
+
+    <!-- Present Address -->
+    <div class="present-address">
+        <p>**Present Address (If Different from Permanent Address)**</p>
+        <label for="sameAsPermanent">Same as Permanent Address:</label>
+        <input type="checkbox" id="sameAsPermanent" name="sameAsPermanent">
+
+        <div class="typeadpin">
+            <label for="cAddressType">Address Type:</label>
+            <select id="cAddressType" name="cAddressType">
+                <option value="Unspecified"> Unspecified </option>
+                <option value="Residential">Residential</option>
+                <option value="Office">Office</option>
+                <option value="Business">Business</option>
+                <option value="RegOffice">Registered Office</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="cPincode">Pincode:</label>
+            <input type="text" id="cPincode" name="cPincode">
+        </div>
+
+        <div class="address">
+            <label for="cAddressLine1">Address Line 1:</label>
+            <input type="text" id="cAddressLine1" name="cAddressLine1">
+
+            <label for="cAddressLine2">Address Line 2:</label>
+            <input type="text" id="cAddressLine2" name="cAddressLine2">
+        </div>
+
+        <div class="statecty">
+            <label for="cCity">City:</label>
+            <input type="text" id="cCity" name="cCity">
+
+            <label for="cDistrict">District:</label>
+            <input type="text" id="cDistrict" name="cDistrict">
+        </div>
+
+        <div class="stacoun">
+            <label for="cState">State:</label>
+            <input type="text" id="cState" name="cState">
+
+            <label for="cCountry">Country:</label>
+            <input type="text" id="cCountry" name="cCountry">
+        </div>
     </div>
 
 
@@ -309,7 +500,9 @@
     <br>
     <p id="amountOutput"> </p>
 
-    <p> => Use The slide to choose Your Monthly Income Range </p>
+    <label for="myRange">
+        <p> => Use The slide to choose Your Monthly Income Range </p>
+    </label>
     <div class="slidecontainer">
         <input type="range" min="1" max="100000" value="50" class="slider" id="myRange">
         <p>Value: <span id="demo"></span></p>
@@ -336,13 +529,15 @@
             address</label>
 
         <input type="checkbox" id="KYC" name="document" value="E-KYC">
-        <label for="jobCard">G- E-KYC </label>
+        <label for="KYC">G- E-KYC </label>
 
         <input type="checkbox" id="offline" name="document" value="Offline">
-        <label for="nprLetter">H - Offline </label>
+        <label for="offline">H - Offline </label>
+        <br><br><br>
 
-        Document No/Identification Number* <input type="text" name="" id=""> <br>
-        Issued By: <input type="text" name="" id="">
+        Document No/Identification Number* <input type="text" name="docNo" id="docNo"
+            placeholder="Enter the provided doc ID"> <br>
+        Issued By: <input type="text" name="" id="" placeholder="Enter the issued date">
         Issued Date: <input type="date" placeholder="dd/mm/yyyy">
         Expiry Date(If Applicable): <input type="date" placeholder="dd/mm/yyyy">
 
@@ -372,7 +567,7 @@
         inform the Bank of any changes in my address/contact details. I also undertake to provide any additional
         documents/information as may be required by the Bank for processing my application.
     </p>
-    <input type="checkbox" name="" id=""> Confirmed.
+    <input type="checkbox" name="" id="confirmch"> <label for="confirmch"> Confirmed. </label>
 
     </div>
     <h3>H. Terms and Conditions</h3>

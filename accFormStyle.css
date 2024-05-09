@@ -60,6 +60,10 @@ body {
   }
 }
 
+.openNav {
+  font-size: 30px;
+  cursor: pointer;
+}
 
 
 .datediv {
@@ -507,10 +511,6 @@ input:hover {
 
 .genmar select:focus {
   border-color: dodgerblue;
-}
-
-.genmar select:focus {
-  border-color: dodgerblue;
   outline: none;
 }
 
@@ -541,6 +541,7 @@ input:hover {
 }
 
 .specifydis {
+  display: none;
   margin-top: 10px;
   margin-bottom: 10px;
   color: #818181;
@@ -629,6 +630,7 @@ input:hover {
   transition: transform 0.8s ease;
   margin-left: 30px;
 }
+
 .famasp input[type="text"]:hover {
   border-color: dodgerblue;
   transform: scale(1.04);
@@ -642,6 +644,7 @@ input:hover {
   color: #888;
   margin-left: 30px;
 }
+
 .famasp small:hover {
   color: #666;
 }
@@ -652,17 +655,18 @@ input:hover {
 .guardinfo {
   margin-bottom: 20px;
 }
+
 .guardinfo label {
   margin-bottom: 5px;
   color: #333;
 }
 
-.guardinfo input{
+.guardinfo input {
   margin-right: 30px;
 }
 
 .guardinfo input[type="text"] {
-  width: calc(35% - 100px); 
+  width: calc(35% - 100px);
   padding: 10px;
   /* font-size: 16px; */
   border: 2px solid #ccc;
@@ -677,7 +681,8 @@ input:hover {
 
 /* Placeholder text styling */
 .guardinfo input[type="text"]::placeholder {
-  color: #aaa; /* Placeholder text color */
+  color: #aaa;
+  /* Placeholder text color */
 }
 
 
@@ -724,6 +729,245 @@ input:hover {
   color: #666;
 }
 
-.notInd{
- margin-left: 250px;
+.notInd {
+  margin-left: 260px;
+}
+
+
+/* Container for the Citizenship and Religion section */
+.citzrel {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.citzrel label {
+  margin-right: 10px;
+  color: #333;
+}
+
+.citzrel input[type="text"] {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+.citzrel select {
+  padding: 5px;
+  font-size: 15px;
+  width: 10%;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+  font-family: jaro;
+}
+
+.citzrel input[type="text"]:hover,
+select:hover {
+  border-color: dodgerblue;
+}
+
+.religion {
+  margin-left: 200px;
+}
+
+
+/* Container for the Category section */
+.catclass {
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+.catclass label {
+  margin-right: 20px;
+  margin-left: 40px;
+  cursor: pointer;
+  font-size: 25;
+  transition: transform 0.8s ease;
+}
+
+.catclass input[type="checkbox"] {
+  margin-right: 5px;
+  height: 25px;
+  width: 25px;
+  transition: transform 0.8s ease;
+}
+
+.catclass input[type="checkbox"]:hover {
+  transform: scale(1.5);
+
+}
+
+.catclass label:hover {
+  color: dodgerblue;
+  transform: scale(1.5);
+}
+
+
+
+/* Container for the Occupation section */
+.occpcl {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.occpcl label {
+  margin-bottom: 5px;
+  cursor: pointer;
+  margin-left: 30px;
+}
+
+.occpcl input[type="checkbox"] {
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.occpcl label:hover {
+  color: dodgerblue;
+}
+
+/* CSS for the organization name and profession */
+.orgprof {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.orgprof label {
+  margin-bottom: 5px;
+}
+
+.orgprof input[type="text"] {
+  margin-left: 35px;
+  width: 25%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 20px;
+  transition: transform 0.8s ease;
+}
+
+.orgprof input[type="text"]:hover {
+  transform: scale(1.2);
+  border-color: green;
+  background-color: #333;
+}
+
+.profclass {
+  margin-left: 40px;
+}
+
+.typeadpin {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.typeadpin input {
+  transition: transform 0.8s ease;
+  margin-left: 50px;
+}
+
+.typeadpin input:hover {
+  border-color: blue;
+  transform: scale(1.3);
+  background-color: #444;
+}
+
+.typeadpin select {
+  margin-right: 240px;
+  margin-left: 50px;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 25%;
+  font-family: Jaro;
+  transition: transform 0.8s ease;
+}
+
+.typeadpin select:hover {
+  border-color: blue;
+  transform: scale(1.3);
+  background-color: #444;
+}
+
+
+
+.address {
+  margin-bottom: 20px;
+}
+
+.address label {
+  margin-bottom: 5px;
+}
+
+.address input[type="text"] {
+  width: 30%;
+  padding: 8px;
+  margin-bottom: 10px;
+  margin-right: 100px;
+  margin-left: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.address input[type="text"]:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.statecty {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.statecty label {
+  width: 20%;
+  margin-right: 10px;
+}
+
+.statecty input[type="text"] {
+  width: 30%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-right: 180px;
+  padding: 10px;
+}
+
+.statecty input[type="text"]:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+
+
+.stacoun {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.stacoun label {
+  width: 20%;
+  margin-right: 10px;
+}
+
+.stacoun input[type="text"] {
+  width: 30%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-right: 180px;
+}
+
+.stacoun input[type="text"]:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
