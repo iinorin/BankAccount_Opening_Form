@@ -469,16 +469,17 @@
         <label for="mobileNo">Mobile Number*:</label>
         <input type="tel" id="mobileNo" name="mobileNo" required>
 
-        <label for="mobileNo2">Alt Mobile Number*:</label>
+        <label for="mobileNo2">Alt. Mobile Number*:</label>
         <input type="tel" id="mobileNo2" name="mobileNo" required>
     </div>
-    
-    <label for="email">Email ID:</label>
-    <input type="email" id="email" name="email">
-    <br>
-    <label for="landlineNo">Landline Number (Optional):</label>
-    <input type="tel" id="landlineNo" name="landlineNo">
-    <br>
+
+    <div class="landemail">
+        <label for="email">Email ID:</label>
+        <input type="email" id="email" name="email">
+
+        <label for="landlineNo">Landline Number (Optional):</label>
+        <input type="tel" id="landlineNo" name="landlineNo">
+    </div>
 
     <h3>D. KYC Documents (Know Your Customer)</h3>
     <p>Please submit copies of the following documents for KYC verification:</p>
@@ -493,22 +494,26 @@
 
 
     <h3>E. Account Details</h3>
-    <label for="accountType">1. Account Type*:</label>
-    <select id="accountType" name="accountType" required>
-        <option value="savings">Savings Account</option>
-        <option value="current">Current Account</option> ₹
-        <option value="current">Salary Account</option>
-        <option value="current">Not Applicable </option>
-    </select>
-    <br>
-    <label for="initialDeposit">2. Initial Deposit: </label>
-    <input type="number" min="0" id="initialDeposit" name="initialDeposit" placeholder="Min 2000">
-    <br>
-    <p id="amountOutput"> </p>
+
+    <div class="aactypedep">
+        <label for="accountType">1. Account Type*:</label>
+        <select id="accountType" name="accountType" required>
+            <option value="savings">Savings Account</option>
+            <option value="current">Current Account</option> ₹
+            <option value="current">Salary Account</option>
+            <option value="current">Not Applicable </option>
+        </select>
+
+        <label for="initialDeposit">2. Initial Deposit: </label>
+        <input type="number" min="0" id="initialDeposit" name="initialDeposit" placeholder="Min 2000"> <br>
+        <p id="amountOutput"> </p>
+    </div>
+
 
     <label for="myRange">
-        <p> => Use The slide to choose Your Monthly Income Range </p>
+        <p> => Use The slide to choose Your Monthly Income Range in ₹ </p>
     </label>
+    
     <div class="slidecontainer">
         <input type="range" min="1" max="100000" value="50" class="slider" id="myRange">
         <p>Value: <span id="demo"></span></p>
