@@ -513,45 +513,63 @@
     <label for="myRange">
         <p> => Use The slide to choose Your Monthly Income Range in ₹ </p>
     </label>
-    
+
     <div class="slidecontainer">
         <input type="range" min="1" max="100000" value="50" class="slider" id="myRange">
         <p>Value: <span id="demo"></span></p>
     </div>
     <H3>Proof of Identity</H3>
-    <div>
-        <input type="checkbox" id="passport" name="document" value="passport">
-        <label for="passport">A - Passport</label>
+    <div class="docprovided">
+        <table>
+            <tr>
+                <td>
+                    <input type="checkbox" id="passport" name="document" value="passport">
+                    <label for="passport">A -Passport</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="voterId" name="document" value="voter-id">
+                    <label for="voterId">B -Voter's Identity Card</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="drivingLicense" name="document" value="driving-license">
+                    <label for="drivingLicense">C -Driving Licence</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="aadharProof" name="document" value="aadhar-proof">
+                    <label for="aadharProof">D - Proof of possession of Aadhaar Number (Verification) </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" id="jobCard" name="document" value="job-card">
+                    <label for="jobCard">E -NREGA Job Card</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="KYC" name="document" value="E-KYC">
+                    <label for="KYC">F -KYC </label>
+                </td>
+                <td>
+                    <input type="checkbox" id="offline" name="document" value="Offline">
+                    <label for="offline">G -Offline </label>
+                </td>
+                <td>
+                    <input type="checkbox" id="nprLetter" name="document" value="npr-letter">
+                    <label for="nprLetter">H -Letter issued by National Population Register containing details of name &
+                        address</label>
+                </td>
+            </tr>
+        </table>
+    </div>
 
-        <input type="checkbox" id="voterId" name="document" value="voter-id">
-        <label for="voterId">B - Voter's Identity Card</label>
-
-        <input type="checkbox" id="drivingLicense" name="document" value="driving-license">
-        <label for="drivingLicense">C - Driving Licence</label>
-
-        <input type="checkbox" id="aadharProof" name="document" value="aadhar-proof">
-        <label for="aadharProof">D - Proof of possession of Aadhaar Number (Verification) </label>
-
-        <input type="checkbox" id="jobCard" name="document" value="job-card">
-        <label for="jobCard">E - NREGA Job Card</label>
-
-        <input type="checkbox" id="nprLetter" name="document" value="npr-letter">
-        <label for="nprLetter">F - Letter issued by National Population Register containing details of name &
-            address</label>
-
-        <input type="checkbox" id="KYC" name="document" value="E-KYC">
-        <label for="KYC">G- E-KYC </label>
-
-        <input type="checkbox" id="offline" name="document" value="Offline">
-        <label for="offline">H - Offline </label>
-        <br><br><br>
-
+    <div class="docdetails">
         Document No/Identification Number* <input type="text" name="docNo" id="docNo"
             placeholder="Enter the provided doc ID"> <br>
+    </div>
+    
+    <div class="isubydates">
         Issued By: <input type="text" name="" id="" placeholder="Enter the issued date">
         Issued Date: <input type="date" placeholder="dd/mm/yyyy">
         Expiry Date(If Applicable): <input type="date" placeholder="dd/mm/yyyy">
-
     </div>
 
     <h3> DECLARATION CUM UNDERTAKING CUM SELF-CERTIFICATION</h3>

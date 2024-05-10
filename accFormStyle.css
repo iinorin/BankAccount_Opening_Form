@@ -1075,4 +1075,158 @@ border-color: red;
   color: #888;
   margin-top: 5px;
 }
+/* Container styling */
+.docprovided {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 
+/* Table styling */
+.docprovided table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Table cell (td) styling */
+.docprovided td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+/* Checkbox styling */
+.docprovided input[type="checkbox"] {
+  display: none;
+}
+
+/* Label styling */
+.docprovided label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  padding-left: 25px;
+}
+
+/* Custom checkbox design */
+.docprovided label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+/* Custom checkbox design when checked */
+.docprovided input[type="checkbox"]:checked + label::before {
+  background-color: #007bff;
+}
+
+/* Checkbox hover effect */
+.docprovided label:hover::before {
+  border-color: #007bff;
+}
+
+/* Label text styling */
+.docprovided label::after {
+  content: attr(data-label);
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Checkbox and label transformation on hover */
+.docprovided input[type="checkbox"]:hover + label::before,
+.docprovided label:hover::before {
+  transform: scale(1.1);
+  transition: transform 0.2s ease;
+}
+/* Checkbox styling */
+.docprovided input[type="checkbox"] {
+  display: none;
+}
+
+/* Label styling */
+.docprovided label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  padding-left: 25px;
+  transition: color 0.3s ease;
+}
+
+/* Custom checkbox design */
+.docprovided label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Custom checkbox design when checked */
+.docprovided input[type="checkbox"]:checked + label::before {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+/* Checkbox hover effect */
+.docprovided label:hover::before {
+  border-color: #007bff;
+}
+
+/* Label text styling */
+.docprovided label::after {
+  content: attr(data-label);
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: color 0.3s ease;
+}
+
+.docprovided input[type="checkbox"]:hover + label::before,
+.docprovided label:hover::before {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.docprovided input[type="checkbox"]:hover + label,
+.docprovided label:hover {
+  color: #007bff;
+}
+
+/* Container styling */
+.docdetails {
+  margin-bottom: 20px;
+}
+
+.docdetails input[type="text"] {
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-left: 10px;
+  transition: border-color 0.3s ease;
+}
+
+.docdetails input[type="text"]:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+
+/* Inori is coming */
