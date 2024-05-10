@@ -127,3 +127,44 @@ sameAsPermanentCheckbox.addEventListener('change', function() {
         cPincode.value = '';
     }
 });
+
+
+const branchNameInput = document.getElementById('branchName');
+const branchCodeInput = document.getElementById('branchCode');
+const customerIdInput = document.getElementById('customerId');
+
+// Function to validate inputs
+function validateInputs() {
+    let isValid = true;
+
+    // Check if branch name is empty
+    if (branchNameInput.value.trim() === '') {
+        isValid = false;
+        branchNameInput.classList.add('error');
+    } else {
+        branchNameInput.classList.remove('error');
+    }
+
+    // Check if branch code is empty
+    if (branchCodeInput.value.trim() === '') {
+        isValid = false;
+        branchCodeInput.classList.add('error');
+    } else {
+        branchCodeInput.classList.remove('error');
+    }
+
+    // Check if customer ID is empty
+    if (customerIdInput.value.trim() === '') {
+        isValid = false;
+        customerIdInput.classList.add('error');
+    } else {
+        customerIdInput.classList.remove('error');
+    }
+
+    return isValid;
+}
+
+// Add event listener to inputs for validation on input change
+branchNameInput.addEventListener('input', validateInputs);
+branchCodeInput.addEventListener('input', validateInputs);
+customerIdInput.addEventListener('input', validateInputs);
