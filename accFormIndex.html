@@ -91,18 +91,74 @@
             <span> <input type="number" name="pfNumber" id="pfNumber" placeholder="Staff PF No."> PF No. </span>
         </div>
     </form>
-<div class="edulevel">
 
-</div>
     <div class="edudetails">
-    <label for="educationLevel">Highest qualification </label>
-    <select id="educationLevel">
-        <option value="10th">10th</option>
-        <option value="12th">12th</option>
-        <option value="graduation">Graduation</option>
-        <option value="post-graduation">Post Graduation</option>
-        <option value="phd">PhD</option>
-    </select>
+        <label for="educationLevel">Highest qualification</label>
+        <select id="educationLevel">
+            <option value="NA">Not Applicable</option>
+            <option value="tenth">10th</option>
+            <option value="twelfth">12th</option>
+            <option value="graduation">Graduation</option>
+            <option value="post-graduation">Post Graduation</option>
+            <option value="phd">PhD</option>
+        </select>
+    </div>
+    
+    <h2>Education Details</h2>
+    <table id="educationTable">
+        <thead>
+            <tr>
+                <th>Course</th>
+                <th>Name</th>
+                <th>School</th>
+                <th>Years</th>
+                <th>Marks</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr id="tenthRow" class="tenthclass">
+                <td>10th</td>
+                <td contenteditable="true" id="tenthName"></td>
+                <td contenteditable="true" id="tenthSchool"></td>
+                <td contenteditable="true" id="tenthYears"></td>
+                <td contenteditable="true" id="tenthMarks"></td>
+                <td contenteditable="true" id="tenthAge"></td>
+            </tr>
+            <tr id="twelfthRow" class="twelfthclass">
+                <td>12th</td>
+                <td contenteditable="true" id="twelfthName"></td>
+                <td contenteditable="true" id="twelfthSchool"></td>
+                <td contenteditable="true" id="twelfthYears"></td>
+                <td contenteditable="true" id="twelfthMarks"></td>
+                <td contenteditable="true" id="twelfthAge"></td>
+            </tr>
+            <tr id="graduationRow" class="graduationclass">
+                <td>Graduation</td>
+                <td contenteditable="true" id="graduationName"></td>
+                <td contenteditable="true" id="graduationSchool"></td>
+                <td contenteditable="true" id="graduationYears"></td>
+                <td contenteditable="true" id="graduationMarks"></td>
+                <td contenteditable="true" id="graduationAge"></td>
+            </tr>
+            <tr id="postgraduationRow" class="postgraduationclass">
+                <td>Post Graduation</td>
+                <td contenteditable="true" id="postgraduationName"></td>
+                <td contenteditable="true" id="postgraduationSchool"></td>
+                <td contenteditable="true" id="postgraduationYears"></td>
+                <td contenteditable="true" id="postgraduationMarks"></td>
+                <td contenteditable="true" id="postgraduationAge"></td>
+            </tr>
+            <tr id="phdRow" class="phdclass">
+                <td>PhD</td>
+                <td contenteditable="true" id="phdName"></td>
+                <td contenteditable="true" id="phdSchool"></td>
+                <td contenteditable="true" id="phdYears"></td>
+                <td contenteditable="true" id="phdMarks"></td>
+                <td contenteditable="true" id="phdAge"></td>
+            </tr>
+        </tbody>
+    </table>
     
 
     <h3>A. Personal Details</h3>

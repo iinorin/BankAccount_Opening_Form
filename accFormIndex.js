@@ -168,3 +168,79 @@ function validateInputs() {
 branchNameInput.addEventListener('input', validateInputs);
 branchCodeInput.addEventListener('input', validateInputs);
 customerIdInput.addEventListener('input', validateInputs);
+
+
+
+
+
+
+// Table changes
+
+document.addEventListener("DOMContentLoaded", function() {
+    var educationLevelSelect = document.getElementById("educationLevel");
+    var educationTable = document.getElementById("educationTable");
+
+    educationLevelSelect.addEventListener("change", function() {
+        var selectedOption = this.value;
+
+        function hideAllRows() {
+            var allRows = [
+                document.getElementById("tenthRow"),
+                document.getElementById("twelfthRow"),
+                document.getElementById("graduationRow"),
+                document.getElementById("postgraduationRow"),
+                document.getElementById("phdRow")
+            ];
+
+            allRows.forEach(function(row) {
+                row.style.display = "none";
+            });
+        }
+
+        function showAllRows() {
+            var allRows = [
+                document.getElementById("tenthRow"),
+                document.getElementById("twelfthRow"),
+                document.getElementById("graduationRow"),
+                document.getElementById("postgraduationRow"),
+                document.getElementById("phdRow")
+            ];
+
+            allRows.forEach(function(row) {
+                row.style.display = "";
+            });
+        }
+
+        hideAllRows();
+
+        if (selectedOption === "NA") {
+            hideAllRows();
+            educationTable.style.display = "none";
+        } else if (selectedOption === "tenth") {
+            hideAllRows();
+            document.getElementById("tenthRow").style.display = "";
+            educationTable.style.display = "table";
+        } else if (selectedOption === "twelfth") {
+            hideAllRows();
+            document.getElementById("tenthRow").style.display = "";
+            document.getElementById("twelfthRow").style.display = "";
+            educationTable.style.display = "table";
+        } else if (selectedOption === "graduation") {
+            hideAllRows();
+            document.getElementById("tenthRow").style.display = "";
+            document.getElementById("twelfthRow").style.display = "";
+            document.getElementById("graduationRow").style.display = "";
+            educationTable.style.display = "table";
+        } else if (selectedOption === "post-graduation") {
+            hideAllRows();
+            document.getElementById("tenthRow").style.display = "";
+            document.getElementById("twelfthRow").style.display = "";
+            document.getElementById("graduationRow").style.display = "";
+            document.getElementById("postgraduationRow").style.display = "";
+            educationTable.style.display = "table";
+        } else if (selectedOption === "phd") {
+            showAllRows();
+            educationTable.style.display = "table";
+        }
+    });
+});

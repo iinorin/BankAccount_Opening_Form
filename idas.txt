@@ -38,3 +38,12 @@ function moveToNext(input) {
 
 </body>
 </html>
+
+
+for value of options =
+    if NA hide every row and table
+    if 10 hide rows(twelfthRow,graduationRow,postgraduationRow,phdRow)
+    if 12 hide rows(graduationRow,postgraduationRow,phdRow)
+    if graduation hide rows(postgraduationRow,phdRow)
+    if post graduation hide rows(phdRow)
+    if phd show every rows
