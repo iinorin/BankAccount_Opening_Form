@@ -1231,6 +1231,53 @@ border-color: red;
 
 /* Inori is coming */
 
+/* Hide the education details initially */
+#educationTable {
+  display: none;
+}
+
+/* Style for the label */
+.edudetails label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Style for the select element */
+.edudetails select {
+  width: 200px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Style for the table */
+#educationTable {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Style for table headers */
+#educationTable th {
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Style for table rows */
+#educationTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+/* Style for table rows on hover */
+#educationTable tr:hover {
+  background-color: #f2f2f2;
+}
+
 
 table {
   border-collapse: collapse;
