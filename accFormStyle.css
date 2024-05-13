@@ -1038,8 +1038,9 @@ select:hover {
   width: 20%;
   margin-right: 10px;
 }
+
 .aactypedep label:hover {
-color: blue;
+  color: blue;
 }
 
 .aactypedep select,
@@ -1052,14 +1053,15 @@ color: blue;
   margin-right: 35px;
   margin-left: 20px;
   transition: transform 0.8s ease;
-  color:#6baa23;
+  color: #6baa23;
 
 }
+
 .aactypedep select:hover,
 .aactypedep input[type="number"]:hover {
-transform: scale(1.2);
-background-color: rgb(37, 36, 37);
-border-color: red;
+  transform: scale(1.2);
+  background-color: rgb(37, 36, 37);
+  border-color: red;
 }
 
 .aactypedep select:focus,
@@ -1075,6 +1077,7 @@ border-color: red;
   color: #888;
   margin-top: 5px;
 }
+
 /* Container styling */
 .docprovided {
   margin-top: 20px;
@@ -1121,7 +1124,7 @@ border-color: red;
 }
 
 /* Custom checkbox design when checked */
-.docprovided input[type="checkbox"]:checked + label::before {
+.docprovided input[type="checkbox"]:checked+label::before {
   background-color: #007bff;
 }
 
@@ -1140,11 +1143,12 @@ border-color: red;
 }
 
 /* Checkbox and label transformation on hover */
-.docprovided input[type="checkbox"]:hover + label::before,
+.docprovided input[type="checkbox"]:hover+label::before,
 .docprovided label:hover::before {
   transform: scale(1.1);
   transition: transform 0.2s ease;
 }
+
 /* Checkbox styling */
 .docprovided input[type="checkbox"] {
   display: none;
@@ -1176,7 +1180,7 @@ border-color: red;
 
 
 /* Custom checkbox design when checked */
-.docprovided input[type="checkbox"]:checked + label::before {
+.docprovided input[type="checkbox"]:checked+label::before {
   background-color: #007bff;
   border-color: #007bff;
 }
@@ -1196,13 +1200,13 @@ border-color: red;
   transition: color 0.3s ease;
 }
 
-.docprovided input[type="checkbox"]:hover + label::before,
+.docprovided input[type="checkbox"]:hover+label::before,
 .docprovided label:hover::before {
   transform: scale(1.1);
   transition: transform 0.3s ease;
 }
 
-.docprovided input[type="checkbox"]:hover + label,
+.docprovided input[type="checkbox"]:hover+label,
 .docprovided label:hover {
   color: #007bff;
 }
@@ -1273,6 +1277,10 @@ border-color: red;
   padding: 8px;
 }
 
+#educationTable td:hover{
+border: 2px dotted rgb(231, 14, 97);
+}
+
 /* Style for table rows on hover */
 #educationTable tr:hover {
   background-color: #f2f2f2;
@@ -1284,11 +1292,13 @@ table {
   width: 100%;
 }
 
-th, td {
+th {
   border: 1px solid #ddd;
   padding: 8px;
   text-align: center;
 }
+
+
 
 th {
   background-color: #f2f2f2;
